@@ -1,0 +1,107 @@
+{
+  "name": "Bruno API Tests",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Add IoT Device using POST",
+      "seq": 3,
+      "request": {
+        "url": "{{host}}/api/devices/register",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"name\" : \"TUP\",\n  \"type\" : \"sensor\",\n  \"location\" : \"TUP Manila\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Retrieve All IoT devices",
+      "seq": 2,
+      "request": {
+        "url": "{{host}}/api/devices",
+        "method": "GET",
+        "headers": [
+          {
+            "name": "",
+            "value": "",
+            "enabled": true
+          }
+        ],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Add IoT Device using POST second device",
+      "seq": 4,
+      "request": {
+        "url": "{{host}}/api/devices/register",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"name\" : \"TUP Heat Sensor\",\n  \"type\" : \"sensor\",\n  \"location\" : \"TUP Manila\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    }
+  ],
+  "activeEnvironmentUid": "RYHSktnRwJ4u66OZungdx",
+  "environments": [
+    {
+      "variables": [
+        {
+          "name": "host",
+          "value": "http://localhost:8080",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        }
+      ],
+      "name": "LocalMachine"
+    }
+  ],
+  "brunoConfig": {
+    "version": "1",
+    "name": "IoT Device Management",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ]
+  }
+}
